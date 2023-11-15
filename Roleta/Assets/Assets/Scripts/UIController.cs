@@ -12,35 +12,41 @@ namespace Assets.Assets.Scripts
     {
         public List<GameObject> panels = new List<GameObject>();
         public Transition transition;
+        private float delayTime = 0.5f;
 
         private void Awake()
         {
-            
+            SetInitialPanels();
+        }
+
+        private void SetInitialPanels()
+        {
+            StartCoroutine(EndTransition(0f, "PanelMainMenu"));
+            transition.SetActiveTranstition(true);
         }
 
         public void BtnPlayGame()
         {
             transition.StartTransition();
-            StartCoroutine(EndTransition("PanelRoulette"));
+            StartCoroutine(EndTransition(delayTime, "PanelRoulette"));
             StartCoroutine(EncerrarRoullete());
+        }
+        public void BtnEndGame()
+        {
+            transition.StartTransition();
+            StartCoroutine(EndTransition(delayTime,"PanelMainMenu"));
         }
 
         public IEnumerator EncerrarRoullete()
         {
             yield return new WaitForSeconds(1);
             transition.StartTransition();
-            StartCoroutine(EndTransition("PanelEndGame"));
+            StartCoroutine(EndTransition(delayTime, "PanelEndGame"));
         }
 
-        public void BtnEndGame()
+        private IEnumerator EndTransition(float delayTime, string panelNameToActive)
         {
-            transition.StartTransition();
-            StartCoroutine(EndTransition("PanelMainMenu"));
-        }
-
-        private IEnumerator EndTransition(string panelNameToActive)
-        {
-            yield return new WaitForSeconds(transition.AnimDelay / 2);
+            yield return new WaitForSeconds(delayTime);
 
             panels.ForEach(p =>
             {

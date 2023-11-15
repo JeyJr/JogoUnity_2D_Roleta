@@ -1,5 +1,4 @@
-﻿using Assets.Assets.Scripts.Enums;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,38 +11,32 @@ namespace Assets.Assets.Scripts
     public class Transition : MonoBehaviour
     {
         Animator anim;
-        public float AnimDelay { get; private set; } = 0f;
+        public float DelayTime { get; private set; } = 1f;
 
         private void Awake()
         {
             anim = GetComponent<Animator>();
-            SetAnimationDuration("TransitionFade");
-            this.gameObject.SetActive(false);
-        }
-
-        private void SetAnimationDuration(string animationName)
-        {
-            AnimatorStateInfo animStateInfo = anim.GetCurrentAnimatorStateInfo(0);
-            int animationHash = Animator.StringToHash(animationName);
-
-            if (animStateInfo.shortNameHash == animationHash)
-            {
-                AnimDelay = animStateInfo.length;
-            }
+            SetActiveTranstition(true);
+            anim.Play("TransitionFadeOut");
         }
 
         public void StartTransition()
         {
             anim.Play("TransitionFade");
-            this.gameObject.SetActive(true);
+            SetActiveTranstition(true);
 
-            StartCoroutine(EndTransition());
+            StartCoroutine(EndTransition(DelayTime));
         }
 
-        private IEnumerator EndTransition()
+        public void SetActiveTranstition(bool active)
         {
-            yield return new WaitForSeconds(AnimDelay);
-            this.gameObject.SetActive(false);
+            this.gameObject.SetActive(active);
+        }
+
+        private IEnumerator EndTransition(float delayTime)
+        {
+            yield return new WaitForSeconds(delayTime);
+            SetActiveTranstition(false);
         }
     }
 }
