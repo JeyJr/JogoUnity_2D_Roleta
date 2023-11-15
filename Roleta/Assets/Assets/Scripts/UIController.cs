@@ -11,7 +11,9 @@ namespace Assets.Assets.Scripts
     public class UIController : MonoBehaviour
     {
         public List<GameObject> panels = new List<GameObject>();
+        public Roulette roulette;
         public Transition transition;
+
         private float delayTime = 0.5f;
 
         private void Awake()
@@ -28,20 +30,19 @@ namespace Assets.Assets.Scripts
         public void BtnPlayGame()
         {
             transition.StartTransition();
+            roulette.StartSpinRoulette(true);
             StartCoroutine(EndTransition(delayTime, "PanelRoulette"));
-            StartCoroutine(EncerrarRoullete());
         }
+
+        public void BtnStopRoulette()
+        {
+            roulette.StopSpinRoulette();
+        }
+
         public void BtnEndGame()
         {
             transition.StartTransition();
             StartCoroutine(EndTransition(delayTime,"PanelMainMenu"));
-        }
-
-        public IEnumerator EncerrarRoullete()
-        {
-            yield return new WaitForSeconds(1);
-            transition.StartTransition();
-            StartCoroutine(EndTransition(delayTime, "PanelEndGame"));
         }
 
         private IEnumerator EndTransition(float delayTime, string panelNameToActive)
@@ -55,6 +56,12 @@ namespace Assets.Assets.Scripts
                 if (p.name == panelNameToActive)
                     p.SetActive(true);
             });
+        }
+    
+        private IEnumerator PlayGame()
+        {
+            yield return new WaitForSeconds(2);
+            roulette.StartSpinRoulette(true);
         }
     }
 }
