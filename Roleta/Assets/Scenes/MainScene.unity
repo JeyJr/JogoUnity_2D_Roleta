@@ -1906,12 +1906,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44eb9ccf940b6cb41a1d96f7fec43018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 432961349}
+  roulette: {fileID: 673310761}
+  txtFinalMessage: {fileID: 868443223}
+  imgFinalLogo: {fileID: 1690880461}
   panels:
   - {fileID: 517375785}
   - {fileID: 692212873}
   - {fileID: 160211385}
-  roulette: {fileID: 673310761}
-  transition: {fileID: 432961349}
 --- !u!1 &1994247921
 GameObject:
   m_ObjectHideFlags: 0

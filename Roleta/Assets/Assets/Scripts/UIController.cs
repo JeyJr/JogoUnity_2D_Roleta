@@ -60,17 +60,23 @@ namespace Assets.Assets.Scripts
         {
             EndGame();
 
-            switch (selectedColor) 
+            switch (selectedColor)
             {
                 case SelectedColor.Red:
-                    imgFinalLogo.color = new Color(255, 0, 0);
-                    txtFinalMessage.text = "Cor vermelha!";
+                    imgFinalLogo.color = new Color(1, 0, 0);
+                    txtFinalMessage.text = "Parabéns!\nVocê vai se tornar um milionário!";
                     break;
-                case SelectedColor.Green: 
+                case SelectedColor.Green:
+                    imgFinalLogo.color = new Color(0, 1, 0);
+                    txtFinalMessage.text = "Parabéns!\nVocê terá muita saúde!";
                     break;
-                case SelectedColor.Blue: 
+                case SelectedColor.Blue:
+                    imgFinalLogo.color = new Color(0, 0, 1);
+                    txtFinalMessage.text = "Parabéns!\nVocê vai conquistar seus sonhos!";
                     break;
-                case SelectedColor.Yellow : 
+                case SelectedColor.Yellow:
+                    imgFinalLogo.color = new Color(1, 1, 0);
+                    txtFinalMessage.text = "Parabéns!\nVocê vai comprar a MT03!";
                     break;
             }
         }

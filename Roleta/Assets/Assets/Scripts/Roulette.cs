@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class Roulette : MonoBehaviour
 {
     private float rotSpeed = 1;
-    private float maxRotSpeed = 5;
+    private float maxRotSpeed = 400;
     private bool spin = false;
     private Image imagemUI;
     private IUIController uIControllerInstance;
