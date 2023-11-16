@@ -21,8 +21,6 @@ public class Roulette : MonoBehaviour
         imagemUI = GetComponent<Image>();
     }
 
-
-
     private void Update()
     {
         if(spin)

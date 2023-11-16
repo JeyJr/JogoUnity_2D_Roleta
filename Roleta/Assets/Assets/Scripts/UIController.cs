@@ -24,7 +24,6 @@ namespace Assets.Assets.Scripts
         [Space(15)]
         public List<GameObject> panels = new List<GameObject>();
 
-
         private float delayTime = 0.5f;
 
         private void Awake()
@@ -68,15 +67,15 @@ namespace Assets.Assets.Scripts
                     break;
                 case SelectedColor.Green:
                     imgFinalLogo.color = new Color(0, 1, 0);
-                    txtFinalMessage.text = "Parabéns!\nVocê terá muita saúde!";
+                    txtFinalMessage.text = "Quase!\nQuem sabe na próxima!";
                     break;
                 case SelectedColor.Blue:
                     imgFinalLogo.color = new Color(0, 0, 1);
-                    txtFinalMessage.text = "Parabéns!\nVocê vai conquistar seus sonhos!";
+                    txtFinalMessage.text = "Quaaaase!\nVocê chegou perto!";
                     break;
                 case SelectedColor.Yellow:
                     imgFinalLogo.color = new Color(1, 1, 0);
-                    txtFinalMessage.text = "Parabéns!\nVocê vai comprar a MT03!";
+                    txtFinalMessage.text = "Vixi!\nPassou longe!";
                     break;
             }
         }
@@ -96,6 +95,5 @@ namespace Assets.Assets.Scripts
             if(panelNameToActive == "PanelRoulette")
                 roulette.StartSpinRoulette();
         }
-
     }
 }

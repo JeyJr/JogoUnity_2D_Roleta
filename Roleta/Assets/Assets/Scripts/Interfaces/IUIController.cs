@@ -12,7 +12,6 @@ namespace Assets.Assets.Scripts
         void PlayGame();
         void StopRoulette();
         void EndGame();
-
         void EndGame(SelectedColor selectedColor);
     }
 }
