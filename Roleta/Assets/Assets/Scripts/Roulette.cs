@@ -12,7 +12,7 @@ public class Roulette : MonoBehaviour
     private float maxRotSpeed = 400;
     private bool spin = false;
     private Image imagemUI;
-    private IUIController uIControllerInstance;
+    private UIController uIControllerInstance;
     public SelectedColor selectedColor;
 
     private void Start()

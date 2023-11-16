@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 namespace Assets.Assets.Scripts
 {
-    public class UIController : MonoBehaviour, IUIController
+    public class UIController : MonoBehaviour
     {
         public Transition transition;
         
