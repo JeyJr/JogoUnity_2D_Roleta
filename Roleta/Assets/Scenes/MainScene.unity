@@ -291,7 +291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &160211386
 RectTransform:
   m_ObjectHideFlags: 0
@@ -397,7 +397,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1819125589}
         m_TargetAssemblyTypeName: Assets.Assets.Scripts.UIController, Assembly-CSharp
-        m_MethodName: BtnEndGame
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -868,7 +868,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673310757}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -930,9 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb347c9092d9814aa7e0df86faae3cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeRotacao: 55
-  spin: 0
-  imagemUI: {fileID: 673310759}
+  selectedColor: 0
 --- !u!1 &692212873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +1057,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1819125589}
         m_TargetAssemblyTypeName: Assets.Assets.Scripts.UIController, Assembly-CSharp
-        m_MethodName: BtnStopRoulette
+        m_MethodName: StopRoulette
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1206,8 +1204,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 93, y: -126}
-  m_SizeDelta: {x: 220, y: 50}
+  m_AnchoredPosition: {x: 0, y: -174}
+  m_SizeDelta: {x: 301.4114, y: 149.2944}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &868443223
 MonoBehaviour:
@@ -1292,7 +1290,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -124.859985, y: 0, z: 62.71057, w: -68.9384}
+  m_margin: {x: 2.804184, y: 0, z: -1.121582, w: -1.5601044}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1999,7 +1997,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1819125589}
         m_TargetAssemblyTypeName: Assets.Assets.Scripts.UIController, Assembly-CSharp
-        m_MethodName: BtnPlayGame
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
